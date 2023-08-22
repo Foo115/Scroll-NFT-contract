@@ -39,3 +39,12 @@ Use the standard ERC-721 transferFrom function to transfer ownership of an NFT f
 Viewing Metadata:
 
 Each NFT has a metadata URI that provides information about the digital asset. Use this URI to retrieve metadata associated with an NFT.
+
+// Mint a new NFT
+contractInstance.mint(recipientAddress, "metadataURI");
+
+// Transfer an NFT
+contractInstance.transferFrom(senderAddress, recipientAddress, tokenId);
+
+// Get NFT metadata URI
+string memory metadataUri = contractInstance.tokenURI(tokenId);
